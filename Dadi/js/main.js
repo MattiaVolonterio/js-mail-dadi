@@ -19,6 +19,6 @@ randomizeButton.addEventListener("click", function () {
   }
 
   winner.innerText = `Il Vincitore è: ${winnerValue}`;
-  userDice.innerHTML = `<i class="fs-1 bi bi-dice-${userDiceValue}"></i>`;
-  computerDice.innerHTML = `<i class="fs-1 bi bi-dice-${computerDiceValue}-fill"></i>`;
+  userDice.innerHTML = `<i class="bi bi-dice-${userDiceValue}"></i>`;
+  computerDice.innerHTML = `<i class="bi bi-dice-${computerDiceValue}-fill"></i>`;
 });
