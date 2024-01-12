@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="./css/style.css" />
 
     <!-- Script -->
-    <script src="./js/main.js"></script>
+    <script src="./js/main.js" defer></script>
   </head>
 
   <body>
@@ -48,11 +48,13 @@
         <button type="button" id="validate-button" class="btn btn-primary mt-3">
           Verifica Mail
         </button>
+        <!-- Bottone Reset -->
+        <button type="reset" id="reset-button" class="btn btn-warning mt-3">
+          Reset
+        </button>
       </form>
 
-      <code id="result" class="d-inline-block mt-4 fs-4"
-        >La mail è presente</code
-      >
+      <code id="result" class="d-inline-block mt-4 fs-4"></code>
     </div>
   </body>
 </html>
