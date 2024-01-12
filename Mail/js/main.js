@@ -9,7 +9,7 @@ const mails = ["aaa@gmail.com", "bbb@gmail.com", "ccc@gmail.com"];
 
 validateButton.addEventListener("click", function () {
   const userEmailValue = userEmailInput.value;
-  if (userEmailValue) {
+  if (userEmailValue && userEmailValue.includes("@")) {
     for (i = 0; i < mails.length; i++) {
       isValid = false;
       let mail = mails[i];
