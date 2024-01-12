@@ -40,28 +40,21 @@
         <!-- Dado Utente -->
         <div class="col-6">
           <h2>Utente</h2>
-          <i class="fs-1 bi bi-dice-1" id="user-dice"></i>
+          <div id="user-dice">
+            <i class="fs-1 bi bi-dice-1"></i>
+          </div>
         </div>
         <!-- Dado computer -->
         <div class="col-6">
           <h2>Computer</h2>
-          <i class="fs-1 bi bi-dice-1-fill" id="computer-dice"></i>
+          <div id="computer-dice">
+            <i class="fs-1 bi bi-dice-1-fill"></i>
+          </div>
         </div>
       </div>
       <!-- Bottone Randomize -->
-      <button
-        type="button"
-        id="randomize-button"
-        class="btn btn-primary mt-5 d-inline-block"
-      >
+      <button type="button" id="randomize-button" class="btn btn-primary mt-5">
         RANDOMIZE
-      </button>
-      <button
-        type="reset"
-        id="reset-button"
-        class="btn btn-warning mt-5 d-none"
-      >
-        RESET
       </button>
       <!-- Vincitore -->
       <code class="d-block mt-5 fs-4" id="winner">Il vincitore è:</code>

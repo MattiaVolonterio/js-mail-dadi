@@ -4,19 +4,11 @@ const randomizeButton = document.getElementById("randomize-button");
 const resetButton = document.getElementById("reset-button");
 const winner = document.getElementById("winner");
 
-let userDiceValue;
-let computerDiceValue;
-
 randomizeButton.addEventListener("click", function () {
-  const randomUserDiceValue = Math.floor(Math.random() * 6 + 1);
-  const randomComputerDiceValue = Math.floor(Math.random() * 6 + 1);
-
-  userDiceValue = `bi-dice-${randomUserDiceValue}`;
-  computerDiceValue = `bi-dice-${randomComputerDiceValue}-fill`;
+  const userDiceValue = Math.floor(Math.random() * 6 + 1);
+  const computerDiceValue = Math.floor(Math.random() * 6 + 1);
 
   let winnerValue = "";
-  userDice.classList.replace(`bi-dice-1`, userDiceValue);
-  computerDice.classList.replace(`bi-dice-1-fill`, computerDiceValue);
 
   if (userDiceValue > computerDiceValue) {
     winnerValue = "Utente";
@@ -27,16 +19,6 @@ randomizeButton.addEventListener("click", function () {
   }
 
   winner.innerText = `Il Vincitore è: ${winnerValue}`;
-
-  randomizeButton.classList.replace("d-inline-block", "d-none");
-  resetButton.classList.replace("d-none", "d-inline-block");
-});
-
-resetButton.addEventListener("click", function () {
-  userDice.classList.replace(userDiceValue, `bi-dice-1`);
-  computerDice.classList.replace(computerDiceValue, `bi-dice-1-fill`);
-  randomizeButton.classList.replace("d-none", "d-inline-block");
-  resetButton.classList.replace("d-inline-block", "d-none");
-
-  winner.innerText = "Il Vincitore è:";
+  userDice.innerHTML = `<i class="fs-1 bi bi-dice-${userDiceValue}"></i>`;
+  computerDice.innerHTML = `<i class="fs-1 bi bi-dice-${computerDiceValue}-fill"></i>`;
 });
