@@ -20,6 +20,12 @@
       defer
     ></script>
 
+    <!-- Icone Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
     <!-- Link CSS -->
     <link rel="stylesheet" href="./css/style.css" />
 
@@ -34,19 +40,28 @@
         <!-- Dado Utente -->
         <div class="col-6">
           <h2>Utente</h2>
-          <span class="d-block">Il tuo dado è:</span>
-          <code class="d-inline-block fs-3 mt-3" id="user-dice">...</code>
+          <i class="fs-1 bi bi-dice-1" id="user-dice"></i>
         </div>
         <!-- Dado computer -->
         <div class="col-6">
           <h2>Computer</h2>
-          <span class="d-block">Il dado del computer è:</span>
-          <code class="d-inline-block fs-3 mt-3" id="computer-dice">...</code>
+          <i class="fs-1 bi bi-dice-1-fill" id="computer-dice"></i>
         </div>
       </div>
       <!-- Bottone Randomize -->
-      <button type="button" id="randomize-button" class="btn btn-primary mt-5">
+      <button
+        type="button"
+        id="randomize-button"
+        class="btn btn-primary mt-5 d-inline-block"
+      >
         RANDOMIZE
+      </button>
+      <button
+        type="reset"
+        id="reset-button"
+        class="btn btn-warning mt-5 d-none"
+      >
+        RESET
       </button>
       <!-- Vincitore -->
       <code class="d-block mt-5 fs-4" id="winner">Il vincitore è:</code>
